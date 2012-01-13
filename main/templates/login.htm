@@ -1,0 +1,12 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <form action="{% url socialauth_begin 'openid' %}" method="post">{% csrf_token %}
+            <div>
+                <input id="openid_identifier" type="hidden" value="http://steamcommunity.com/openid/" name="openid_identifier" />
+                <input type="submit" value="Login" />
+            </div>
+        </form>
+    </body>
+</html>
